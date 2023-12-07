@@ -55,3 +55,4 @@ export const SearchMovieByName = async (name) => {
     );
     return data;
 }
+
