@@ -79,8 +79,6 @@ const MovieDetails = () => {
 
 export default MovieDetails;
 
-
-
 //  const {
 //         id,
 //         backdrop_path,
