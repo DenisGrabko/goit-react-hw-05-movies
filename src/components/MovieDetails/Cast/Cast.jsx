@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Outlet, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getActorsList } from 'api-service/trending-service';
-import MovieDetails from "../MovieDetails";
 import { GlobalSection, GlobalList, GlobalItem, CastList, CastItem, CastImage, CastText } from "./Cast.styled";
 
 const Cast = () => {

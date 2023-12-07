@@ -26,51 +26,50 @@ const MovieDetails = () => {
             } catch (error) {
                 Notify.failure('Something went wrong');
             }
-        };       
-        
+        };
+
         fetchMovieDetails();
     }, [movieId]);
-    
+
     return (
         <>
             {movieDetails && (
                 <ContainerForMovieDetails key={movieDetails.id}>
                     <BackgroundContainerImageMovie>
-                        <BackgroundImageMovie src={`https://image.tmdb.org/t/p/w300/${movieDetails.backdrop_path }`}>
+                        <BackgroundImageMovie src={`https://image.tmdb.org/t/p/w300/${movieDetails.backdrop_path}`}>
                         </BackgroundImageMovie>
                     </BackgroundContainerImageMovie>
                     <SectionDetails>
                         <img
-                        src={`https://image.tmdb.org/t/p/w300/${movieDetails.poster_path}`}
-                        alt={movieDetails.original_title}
-                    />
-                    <div>
+                            src={`https://image.tmdb.org/t/p/w300/${movieDetails.poster_path}`}
+                            alt={movieDetails.original_title}
+                        />
                         <div>
-                                <h2>{movieDetails.original_title}</h2>
-                                <p>{movieDetails.runtime}min</p>
                             <div>
-                                <p>{movieDetails.release_date.slice(0, 4)}</p>
-                                <span>User Score: 
-                                    {movieDetails.vote_average === 0
-                                        ? '-'
-                                        : parseFloat((movieDetails.vote_average).toFixed(1).toString().replace('', ' '))}
-                                    %🏆
-                                </span>
+                                <h2>{movieDetails.original_title}</h2>
+                                {movieDetails.runtime && <p>{movieDetails.runtime} min</p>}
+                                <div>
+                                    <p>{movieDetails.release_date.slice(0, 4)}</p>
+                                    <span>User Score: 
+                                        {movieDetails.vote_average === 0
+                                            ? '-'
+                                            : movieDetails.vote_average.toFixed(1)}%🏆
+                                    </span>
                                 </div>
-                                <p>Overview: { movieDetails.overview }</p>
+                                <p>Overview: {movieDetails.overview}</p>
+                            </div>
                         </div>
-                        </div>
-                    </SectionDetails>                    
+                    </SectionDetails>
                     <SectionDetails>
-                       <CastElementList> 
-                         <CastElement>
-                           <CastLink to="cast">Cast</CastLink>
-                         </CastElement>
-                         <CastElement>
-                           <ReviewsLink to="reviews">Reviews</ReviewsLink>
-                         </CastElement>                        
-                       </CastElementList>
-                  </SectionDetails>
+                        <CastElementList>
+                            <CastElement>
+                                <CastLink to="cast">Cast</CastLink>
+                            </CastElement>
+                            <CastElement>
+                                <ReviewsLink to="reviews">Reviews</ReviewsLink>
+                            </CastElement>
+                        </CastElementList>
+                    </SectionDetails>
                 </ContainerForMovieDetails>
             )}
             <Outlet />
@@ -79,6 +78,7 @@ const MovieDetails = () => {
 };
 
 export default MovieDetails;
+
 
 
 //  const {

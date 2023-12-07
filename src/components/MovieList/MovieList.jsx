@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';   //{ useState, useEffect }
 // import { useLocation, useParams } from 'react-router-dom';
 // import { Notify } from 'notiflix';
 // import { getDetailInfoById } from 'api-service/trending-service';
