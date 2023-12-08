@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
-import HomePage from '../pages/HomePage';
-import MoviesPage from '../pages/MoviesPage';
-import MovieDetails from '../components/MovieDetails/MovieDetails';
 import Layout from './Layout/Layout';
-import Cast from './MovieDetails/Cast/Cast';
-import Reviews from './MovieDetails/Reviews/Reviews';
+const HomePage = lazy(() => import('pages/HomePage'));
+const MoviesPage = lazy(() => import('pages/MoviesPage'));
+const MovieDetails = lazy(() => import('../components/MovieDetails/MovieDetails'));
 
+const Cast = lazy(() => import('./MovieDetails/Cast/Cast'));
+const Reviews = lazy(() => import('./MovieDetails/Reviews/Reviews'));
 
 const App = () => {
-  return (
+  return (<Suspense fallback={<div>Loading...</div>}>
     <Routes>
       <Route path='/' element={<Layout />}>
         <Route index element={<HomePage />}/>  
@@ -20,7 +20,8 @@ const App = () => {
         </Route>
       </Route>
       <Route path='*' element={<Navigate to='/' />}/>
-  </Routes>)
+    </Routes>
+  </Suspense>)
   
 }
 

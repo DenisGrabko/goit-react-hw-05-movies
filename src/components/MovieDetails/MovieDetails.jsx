@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Outlet, useParams } from 'react-router-dom';
+import { Outlet, useParams, useLocation } from 'react-router-dom';
 import { getDetailInfoById } from 'api-service/trending-service';
 import { Notify } from 'notiflix';
 import {
@@ -7,6 +7,7 @@ import {
     BackgroundContainerImageMovie,
     BackgroundImageMovie,
     SectionDetails,
+    BackPathButton,
     CastElementList,
     CastElement,
     CastLink,
@@ -16,6 +17,8 @@ import {
 const MovieDetails = () => {
     const [movieDetails, setMovieDetails] = useState(null);
     const { movieId } = useParams();
+    const location = useLocation();
+    const backLink = location.state?.from ?? '/home';
 
     useEffect(() => {
         const fetchMovieDetails = async () => {
@@ -40,12 +43,14 @@ const MovieDetails = () => {
                         </BackgroundImageMovie>
                     </BackgroundContainerImageMovie>
                     <SectionDetails>
+                        
                         <img
                             src={`https://image.tmdb.org/t/p/w300/${movieDetails.poster_path}`}
                             alt={movieDetails.original_title}
                         />
                         <div>
                             <div>
+                                <BackPathButton to={backLink}>Back</BackPathButton>
                                 <h2>{movieDetails.original_title}</h2>
                                 {movieDetails.runtime && <p>{movieDetails.runtime} min</p>}
                                 <div>

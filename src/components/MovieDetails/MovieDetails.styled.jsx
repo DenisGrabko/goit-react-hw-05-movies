@@ -40,6 +40,11 @@ export const SectionDetails = styled.section`
     margin-left: auto;
     gap: 10px;
 `;
+
+export const BackPathButton = styled(NavLink)`
+  color: grey;
+  text-decoration: none;
+`
 export const CastElementList = styled.ul`
      display: flex;
      flex-direction: row;     
