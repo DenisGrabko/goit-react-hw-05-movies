@@ -46,7 +46,7 @@
 import axios from "axios";
 //axios.defaults.baseURL = 'https://api.themoviedb.org/3/trending/movie/day?language=en-US';
 
-export const API_KEY = '8174f1744af1a46c4588fe70a373352a';
+export const API_KEY = '84bfbb25066c9e2a68d7046ad581b0ec';  //8174f1744af1a46c4588fe70a373352a
 axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 axios.defaults.params = {
     api_key: API_KEY,
