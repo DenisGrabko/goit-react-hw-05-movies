@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { getTrending } from "api-service/trending-service";
 // import { NavLink } from "react-router-dom";
-import { FlexItemList, StyledLink, FilmTitleImage, FlexItemDescription, TitleFilm, ShellForItemText, FlexItemTextStyle } from "./HomePage.styled";
+import { FlexItemList, 
+         StyledLink, 
+         FilmTitleImage, 
+         FlexItemDescription, 
+         TitleFilm, 
+         ShellForItemText, 
+         FlexItemTextStyle } from "./HomePage.styled";
 import { Outlet } from "react-router-dom";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 // import Notiflix from "notiflix";

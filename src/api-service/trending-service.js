@@ -19,7 +19,6 @@ const options = {
 };
 
 export const getTrending = async () => {
-
     const { data } = await axios.get(
         'trending/movie/day?language=en-US',
         options
