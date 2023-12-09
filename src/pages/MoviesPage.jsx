@@ -27,7 +27,7 @@ const MoviesPage = () => {
 
   const handleSubmit = (query) => {
     if (!query) return;
-    setSearchInfo({ query: query });
+    setSearchInfo({ query });
   };
 
   return (
