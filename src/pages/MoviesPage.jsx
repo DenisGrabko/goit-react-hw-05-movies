@@ -33,8 +33,8 @@ const MoviesPage = () => {
   return (
     <>
       <h2>What do you want to find?</h2>
-      <SearchForm handleSubmit={handleSubmit} /> 
-
+      <SearchForm handleSubmit={handleSubmit} />
+      
       <MovieList movies={movies} />
     </>
   );
