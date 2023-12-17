@@ -47,7 +47,7 @@ const MovieDetails = () => {
                         <img
                             src={`https://image.tmdb.org/t/p/w300/${movieDetails.poster_path}`}
                             alt={movieDetails.original_title}
-                        />
+                        />                        
                         <div>
                             <div>
                                 <BackPathButton to={backLink}>Back</BackPathButton>

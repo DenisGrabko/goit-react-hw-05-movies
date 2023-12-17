@@ -26,12 +26,14 @@ const MovieList = ({ movies }) => {
                         original_title,
                         release_date,
                         poster_path,
-                        vote_average,          
+                        vote_average,         
                     }) => ( 
                         <li key={id}>
                             <Link to={`/movies/${id}`} state={{ from: location }}>
                                 <FilmTitleImage
-                                    src={`https://image.tmdb.org/t/p/w300/${poster_path}`}
+                                    src={poster_path ? 
+                                        `https://image.tmdb.org/t/p/w300/${poster_path}` : 
+                                        'https://thefutureofthings.com/wp-content/uploads/2021/01/cinema-4153289_1280-1024x660.jpg'}
                                     alt={original_title}
                                 />
                                 <div>

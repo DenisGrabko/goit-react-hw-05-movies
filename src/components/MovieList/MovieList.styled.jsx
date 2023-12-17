@@ -24,6 +24,8 @@ export const FlexItem = styled.li`
 
 export const FilmTitleImage = styled.img`
     border-radius: 9%;
+    width: 300px;
+    height: 450px;
 `;
 
 export const FlexItemDescription = styled.div`

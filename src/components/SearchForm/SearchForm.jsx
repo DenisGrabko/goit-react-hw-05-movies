@@ -6,7 +6,7 @@ const SearchForm = ({ handleSubmit }) => {
 
   const handleChange = (event) => {
     setValue(event.target.value);
-    console.log(value);
+    //console.log(value);
   }
 
   const onSubmit = (event) => {
