@@ -29,7 +29,7 @@ const MovieList = ({ movies }) => {
                         vote_average,         
                     }) => ( 
                         <li key={id}>
-                            <Link to={`/movies/${id}`} state={{ from: location }}>
+                            <Link to={`/movies/${id}`} state={{ from: location }} style={{textDecoration:'none'}}>
                                 <FilmTitleImage
                                     src={poster_path ? 
                                         `https://image.tmdb.org/t/p/w300/${poster_path}` : 

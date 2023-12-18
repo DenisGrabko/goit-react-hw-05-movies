@@ -19,9 +19,7 @@ export const BackgroundContainerImageMovie = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    /* background: ${props => `url(${props.backdrop})`} center no-repeat;*/
-    background-size: cover; 
-   
+    background-size: cover;    
     z-index: -1;
   }
 `;
@@ -34,7 +32,6 @@ export const BackgroundImageMovie = styled.img`
 
 export const SectionDetails = styled.section`
     display: flex;
-    /* align-items: center; */
     max-width: 1400px;
     margin-right: auto;
     margin-left: auto;
