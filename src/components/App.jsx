@@ -1,15 +1,15 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import Layout from './Layout/Layout';
-const HomePage = lazy(() => import('pages/HomePage'));
-const MoviesPage = lazy(() => import('pages/MoviesPage'));
-const MovieDetails = lazy(() => import('../components/MovieDetails/MovieDetails'));
+const HomePage = lazy(() => import('pages/Home/HomePage'));
+const MoviesPage = lazy(() => import('pages/Movies/MoviesPage'));
+const MovieDetails = lazy(() => import('../pages/MovieDetails/MovieDetails'));
 
-const Cast = lazy(() => import('./MovieDetails/Cast/Cast'));
-const Reviews = lazy(() => import('./MovieDetails/Reviews/Reviews'));
+const Cast = lazy(() => import('./Cast/Cast'));
+const Reviews = lazy(() => import('./Reviews/Reviews'));
 
 const App = () => {
-  return (<Suspense fallback={<div>Loading...</div>}>
+  return (
     <Routes>
       <Route path='/' element={<Layout />}>
         <Route index element={<HomePage />}/>  
@@ -21,7 +21,7 @@ const App = () => {
       </Route>
       <Route path='*' element={<Navigate to='/' />}/>
     </Routes>
-  </Suspense>)
+    )
   
 }
 

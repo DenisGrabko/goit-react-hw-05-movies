@@ -6,7 +6,7 @@ const Header = () => {
       <>
           <StyledHeader>
               <WrapperLogo to="/">
-                  <LogoImage src='https://img.freepik.com/premium-vector/cinema-movie-logo-with-gradient-background-template_502990-937.jpg'
+                  <LogoImage src='https://cdn.icon-icons.com/icons2/2104/PNG/512/cinema_icon_129443.png'
                       alt='logo'
                   />
               </WrapperLogo>

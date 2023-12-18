@@ -53,6 +53,3 @@ const Cast = () => {
 };
 
 export default Cast;
-
-
-// ({ credit_id, name, character, profile_path })

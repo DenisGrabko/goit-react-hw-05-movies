@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getMovieReviews } from '../../../api-service/trending-service';
+import { getMovieReviews } from '../../api-service/trending-service';
 import { GlobalSection, ReviewsList, ReviewsItem, ReviewsTitle, ReviewsText } from "./Reviews.styled";
 
 
@@ -27,7 +27,7 @@ const Reviews = () => {
         <>
         <GlobalSection>
             <ReviewsList>
-      {reviews.length === 0 ? ("Empty reviews details") : (
+      {reviews.length === 0 ? <li> <p>Empty reviews details</p> </li> : (
                 <ReviewsItem>
                     {reviews.map(({ id, author, content }) => {
                         return (

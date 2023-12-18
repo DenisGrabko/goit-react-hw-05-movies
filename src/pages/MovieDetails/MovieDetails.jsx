@@ -39,13 +39,18 @@ const MovieDetails = () => {
             {movieDetails && (
                 <ContainerForMovieDetails key={movieDetails.id}>
                     <BackgroundContainerImageMovie>
-                        <BackgroundImageMovie src={`https://image.tmdb.org/t/p/w300/${movieDetails.backdrop_path}`}>
+                        <BackgroundImageMovie src={movieDetails.backdrop_path 
+                    ? `https://image.tmdb.org/t/p/w300/${movieDetails.backdrop_path}`  
+                    : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX4KoBreOsyrgj5WCIzA3DrztQ6R3bXg-PyQ&usqp=CAU'
+                    }>
                         </BackgroundImageMovie>
                     </BackgroundContainerImageMovie>
                     <SectionDetails>
                         
                         <img
-                            src={`https://image.tmdb.org/t/p/w300/${movieDetails.poster_path}`}
+                            src={movieDetails.poster_path  
+                               ? `https://image.tmdb.org/t/p/w300/${movieDetails.poster_path}` 
+                               : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX4KoBreOsyrgj5WCIzA3DrztQ6R3bXg-PyQ&usqp=CAU'}
                             alt={movieDetails.original_title}
                         />                        
                         <div>
@@ -84,20 +89,3 @@ const MovieDetails = () => {
 
 export default MovieDetails;
 
-//  const {
-//         id,
-//         backdrop_path,
-//         original_language,
-//         original_title,
-//         overview,
-//         poster_path,
-//         release_date,
-//         title,
-//         vote_average
-//     } = movies || [];
-
-
-// getDetailInfoById(movieId)
-//     .then(response => response.json())
-//     .then(data => { console.log(data); setData(data.results)})
-//     .catch(err => console.log(err));

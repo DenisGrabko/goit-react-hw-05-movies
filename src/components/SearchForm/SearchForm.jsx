@@ -11,6 +11,7 @@ const SearchForm = ({ handleSubmit }) => {
 
   const onSubmit = (event) => {
     event.preventDefault();
+    if(!value) return;
     handleSubmit(value);
   }
 

@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Header from '../Header/Header';
 import { Outlet } from 'react-router-dom';
-//import MovieDetails from 'components/MovieDetails/MovieDetails';
 
 const Layout = () => {
   return (
       <>
           <Header />
-          {/* <MovieDetails /> */}
-          <Outlet />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Outlet />
+          </Suspense>          
       </>
   )
 } 

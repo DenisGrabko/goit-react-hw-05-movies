@@ -56,11 +56,3 @@ const MovieList = ({ movies }) => {
 export default MovieList;
 
 
-//const [movie, setMovie] = useState(null);
-    // const { movieId } = useParams();
-   
-    // useEffect(() => {
-    //     getDetailInfoById(movieId)
-    //         .then(setMovie)
-    //         .catch(() => Notify.failure('Something went wrong'));
-    // }, [movieId]);
