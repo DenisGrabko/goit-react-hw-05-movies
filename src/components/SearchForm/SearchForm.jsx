@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { SearchFormCustom } from "./SearchForm.styled";
+import styles from "./SearchForm.module.css";
 
 const SearchForm = ({ handleSubmit }) => {
 
@@ -6,7 +8,6 @@ const SearchForm = ({ handleSubmit }) => {
 
   const handleChange = (event) => {
     setValue(event.target.value);
-    //console.log(value);
   }
 
   const onSubmit = (event) => {
@@ -16,14 +17,18 @@ const SearchForm = ({ handleSubmit }) => {
   }
 
   return (
-    <form onSubmit={onSubmit}>
+    <SearchFormCustom onSubmit={onSubmit}>
       <input
         type="text"
         placeholder="Search"
         value={value}
         onChange={handleChange}
+        
       />
-    </form>
+      <div type="submit" className={styles['SearchForm-button']}>
+      </div>
+
+    </SearchFormCustom>
   )
 }
 

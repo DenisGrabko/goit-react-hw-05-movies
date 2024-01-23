@@ -38,10 +38,48 @@ export const SectionDetails = styled.section`
     gap: 10px;
 `;
 
+export const AllMovieDetailsContrainer = styled.div`
+  margin-top: 35px;
+`;
+
+export const BackPathButtonContainer = styled.div`
+position: absolute;
+top: 725px;
+display: flex;
+justify-content: center;
+width: 60px;
+height: auto;
+border:solid 1px #41403E;
+
+&:hover{
+  box-shadow:2px 8px 4px -6px hsla(0, 0%, 0%, .3);      
+  border:solid 2px #41403E;
+  color: #41403E;  
+}
+`;
+
 export const BackPathButton = styled(NavLink)`
-  color: grey;
-  text-decoration: none;
-`
+width: 60px;
+height: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+color: grey;
+text-decoration: none;
+`;
+
+export const MovieDetailsTitle = styled.h2`
+color: grey;
+`;
+
+export const MovieDetailsText = styled.p`
+color: grey;
+`;
+
+export const MovieDetailsScore = styled.span`
+color: grey;
+`;
+
 export const CastElementList = styled.ul`
      display: flex;
      flex-direction: row;     

@@ -5,6 +5,7 @@ import MovieList from "components/MovieList/MovieList";
 
 import { SearchMovieByName } from "api-service/trending-service";
 import { Notify } from "notiflix";
+import { MovieHeaderTitle } from "./MoviesPage.styled";
 
 
 const MoviesPage = () => {
@@ -31,7 +32,7 @@ const MoviesPage = () => {
 
   return (
     <>
-      <h2>What do you want to find?</h2>
+      <MovieHeaderTitle>What do you want to find?</MovieHeaderTitle>
       <SearchForm handleSubmit={handleSubmit} />      
       <MovieList movies={movies} />
     </>

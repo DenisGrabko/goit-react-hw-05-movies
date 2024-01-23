@@ -1,0 +1,23 @@
+.SearchForm-button {
+  position: absolute;
+    top: 0;
+    right: -14px;
+    width: 45px;
+    height: 47px;
+    border: none;
+    background: #7BA7AB;
+    border-radius: 0 5px 5px 0;
+    background-image: url('../../PngImages/magnifying-glass-solid.png');
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.6;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  
+}
+
+.SearchForm-button:hover {
+  opacity: 1;
+}
+

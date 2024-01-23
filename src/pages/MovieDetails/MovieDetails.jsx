@@ -7,7 +7,12 @@ import {
     BackgroundContainerImageMovie,
     BackgroundImageMovie,
     SectionDetails,
+    AllMovieDetailsContrainer,
+    BackPathButtonContainer,
     BackPathButton,
+    MovieDetailsTitle,
+    MovieDetailsText,
+    MovieDetailsScore,
     CastElementList,
     CastElement,
     CastLink,
@@ -24,7 +29,6 @@ const MovieDetails = () => {
         const fetchMovieDetails = async () => {
             try {
                 const data = await getDetailInfoById(movieId);
-                console.log('data: >>', data);
                 setMovieDetails(data);
             } catch (error) {
                 Notify.failure('Something went wrong');
@@ -54,20 +58,23 @@ const MovieDetails = () => {
                             alt={movieDetails.original_title}
                         />                        
                         <div>
-                            <div>
-                                <BackPathButton to={backLink}>Back</BackPathButton>
-                                <h2>{movieDetails.original_title}</h2>
-                                {movieDetails.runtime && <p>{movieDetails.runtime} min</p>}
+                            <BackPathButtonContainer>
+                                    <BackPathButton to={backLink}>Back</BackPathButton>
+                            </BackPathButtonContainer>
+                            
+                            <AllMovieDetailsContrainer>
+                                <MovieDetailsTitle>{movieDetails.original_title}</MovieDetailsTitle>
+                                {movieDetails.runtime && <MovieDetailsText>{movieDetails.runtime} min</MovieDetailsText>}
                                 <div>
-                                    <p>{movieDetails.release_date.slice(0, 4)}</p>
-                                    <span>User Score: 
+                                    <MovieDetailsText>{movieDetails.release_date.slice(0, 4)}</MovieDetailsText>
+                                    <MovieDetailsScore>User Score: 
                                         {movieDetails.vote_average === 0
                                             ? '-'
-                                            : movieDetails.vote_average.toFixed(1)}%🏆
-                                    </span>
+                                            : " " + movieDetails.vote_average.toFixed(1)}%🏆
+                                    </MovieDetailsScore>
                                 </div>
-                                <p>Overview: {movieDetails.overview}</p>
-                            </div>
+                                <MovieDetailsText>Overview: {movieDetails.overview}</MovieDetailsText>
+                            </AllMovieDetailsContrainer>
                         </div>
                     </SectionDetails>
                     <SectionDetails>
