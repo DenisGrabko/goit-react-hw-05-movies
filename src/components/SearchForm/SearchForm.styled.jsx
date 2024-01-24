@@ -3,11 +3,12 @@ import styled from "@emotion/styled";
 export const SearchFormCustom = styled.form`
 position: relative;
 width: 25%;
+padding-left: 15px;
 
  input {
   width: 100%;
   height: 42px;
-  padding-left: 10px;
+  padding: 0 0 0 10px;
   border: 2px solid #7BA7AB;
   border-radius: 5px;
   outline: none;
@@ -24,8 +25,7 @@ export const SearchButton = styled.button`
     height: 100%;
     rotate: 270deg;
     border: none;
-    border-radius: 0 5px 5px 0;
-    background-image: url('../../PngImages/search.png');
+    border-radius: 0 5px 5px 5px;
     opacity: 0.6;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;  

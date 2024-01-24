@@ -1,13 +1,12 @@
 .Container {
   max-width: 1400px;
-  padding: 0 0 0 15px;
   margin-right: auto;
   margin-left: auto;
 }
 
 .SearchForm-button {  
     background: #7BA7AB;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 5px;
     background-image: url('../../PngImages/search.png');
     background-repeat: no-repeat;
     background-position: center;    
