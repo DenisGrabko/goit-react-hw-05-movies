@@ -7,9 +7,13 @@ display: flex;
 flex-wrap: wrap;
 flex-direction: row;
 justify-content: space-between;
+padding: 0 40px 0 40px;
 column-gap: 15px;
 row-gap: 15px;
 margin-right: 73px;
+max-width: 1400px;
+margin-right: auto;
+margin-left: auto;
 `;
 
 export const StyledLink = styled(Link)`
