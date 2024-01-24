@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { SearchFormCustom } from "./SearchForm.styled";
 import styles from "./SearchForm.module.css";
+import { SearchFormCustom, SearchButton } from "./SearchForm.styled";
 
 const SearchForm = ({ handleSubmit }) => {
 
@@ -17,18 +17,17 @@ const SearchForm = ({ handleSubmit }) => {
   }
 
   return (
+    <div className={styles['Container']}>
     <SearchFormCustom onSubmit={onSubmit}>
       <input
         type="text"
         placeholder="Search"
         value={value}
-        onChange={handleChange}
-        
+        onChange={handleChange}        
       />
-      <div type="submit" className={styles['SearchForm-button']}>
-      </div>
-
-    </SearchFormCustom>
+      <SearchButton type="submit" className={styles['SearchForm-button']} onClick={onSubmit} />
+      </SearchFormCustom>
+    </div>
   )
 }
 

@@ -43,15 +43,15 @@ export const AllMovieDetailsContrainer = styled.div`
 `;
 
 export const BackPathButtonContainer = styled.div`
-position: absolute;
-top: 725px;
-display: flex;
-justify-content: center;
-width: 60px;
-height: auto;
-border:solid 1px #41403E;
+  position: absolute;
+  top: 725px;
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  height: auto;
+  border:solid 1px #41403E;
 
-&:hover{
+&:hover {
   box-shadow:2px 8px 4px -6px hsla(0, 0%, 0%, .3);      
   border:solid 2px #41403E;
   color: #41403E;  
@@ -81,25 +81,25 @@ color: grey;
 `;
 
 export const CastElementList = styled.ul`
-     display: flex;
-     flex-direction: row;     
-     justify-content: space-between;
-     padding-left: 10px;
-     width: 200px;
+display: flex;
+flex-direction: row;     
+justify-content: space-between;
+padding-left: 10px;
+width: 200px;
 `;
 
 export const CastElement = styled.li`
-    list-style-type: none;
+list-style-type: none;
 `;
 
 export const CastLink = styled(NavLink)`
-    color: grey;
-    font-size: 2rem;
-    text-decoration: none;
+color: grey;
+font-size: 2rem;
+text-decoration: none;
 `;
 
 export const ReviewsLink = styled(NavLink)`
-    color: grey;
-    font-size: 2rem;
-    text-decoration: none;
+color: grey;
+font-size: 2rem;
+text-decoration: none;
 `;
