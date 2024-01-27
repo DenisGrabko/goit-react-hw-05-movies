@@ -50,6 +50,9 @@ export const BackPathButtonContainer = styled.div`
   width: 60px;
   height: auto;
   border:solid 1px #41403E;
+  @media (max-width: 800px) {
+    top: 769px;
+  }
 
 &:hover {
   box-shadow:2px 8px 4px -6px hsla(0, 0%, 0%, .3);      

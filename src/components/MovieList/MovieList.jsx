@@ -1,10 +1,7 @@
-import React from 'react';  //, { useState, useEffect } 
-import { useLocation,  Link } from 'react-router-dom'; //useParams,
-// import { Notify } from 'notiflix';
-// import { getDetailInfoById } from 'api-service/trending-service';
+import React from 'react';
+import { useLocation,  Link } from 'react-router-dom'; 
 import {
     FlexItemList,
-    // StyledLink,
     FilmTitleImage,
     FlexItemDescription,
     TitleFilm,
