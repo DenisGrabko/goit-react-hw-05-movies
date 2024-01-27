@@ -5,7 +5,7 @@ position: relative;
 width: 30%;
 padding-left: 15px;
 @media (max-width:800px) {
-    width: 50%;
+    width: 75%;
 }
 
  input {
@@ -19,7 +19,7 @@ padding-left: 15px;
   color: #9E9C9C; 
   @media (max-width: 800px) {
     width: 100%;
-    height: 68px;
+    height: 100px;
     font-size: larger;
     background-size: 40%;    
   }  
@@ -28,17 +28,20 @@ padding-left: 15px;
 
 export const SearchButton = styled.button`
   position: absolute;
-  top: 0;
+  top: 4.9px;
   right: -14px;
-  width: 45px;
-  height: 100%;
+  width: 44px;
+  height: 87%;
   rotate: 270deg;
   border: none;
-  border-radius: 0 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
   opacity: 0.6;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer; 
   @media (max-width: 800px) {
+    top: 0;
+    width: 101px;
+    height: 104px;
     background-size: 60%;
   }    
 `;
