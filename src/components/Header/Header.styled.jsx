@@ -6,7 +6,7 @@ export const StyledHeader = styled.div`
     flex-direction: row;
     justify-content: space-between;
     max-width: 1400px;
-    padding: 15px 45px 0 15px;
+    padding: 15px 45px 0 20px;
     margin-right: auto;
     margin-left: auto;
 `;
@@ -21,18 +21,25 @@ export const LogoImage = styled.img`
 `
 
 export const NavBar = styled.nav`
+    height: 100px;
     display: flex;
-    column-gap: 25px;
+    padding-top: 4px;
+    column-gap: 25px;    
 `;
 
 export const StyledLink = styled(NavLink)`
     width: 100px;
+    height: 100%;
     text-decoration: none;
     position: relative;
-    /* font-size: 190%; */
     color: #c9c9c9;
-    transition: color 200ms ease-in-out ;
-    font: italic small-caps bold 25px/3 cursive; 
+    transition: color 200ms ease-in-out ;        
+    font-size: 25px;
+    line-height: 3;
+    letter-spacing: 0.005em;
+    font-weight: bold;
+
+    /* font: italic small-caps bold 25px/3 cursive;  */
 
     &.active {
         color: #fff;
