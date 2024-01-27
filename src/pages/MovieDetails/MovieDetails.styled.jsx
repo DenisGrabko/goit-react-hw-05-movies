@@ -51,7 +51,7 @@ export const BackPathButtonContainer = styled.div`
   width: 60px;
   height: auto;
   border:solid 1px #41403E;
-  @media (max-width: 800px) {
+  @media (max-width: 768px) {
     top: 769px;
   }
 

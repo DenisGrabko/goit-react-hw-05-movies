@@ -6,7 +6,7 @@ export const MovieHeaderTitle = styled.h2`
   margin-right: auto;
   margin-left: auto;
   color: #8e8e8b;
-  @media screen {
+  @media (max-width: 768px) {
     font-size: 50px;
   }
 `;

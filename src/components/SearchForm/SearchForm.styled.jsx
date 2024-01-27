@@ -4,7 +4,7 @@ export const SearchFormCustom = styled.form`
 position: relative;
 width: 30%;
 padding-left: 15px;
-@media (max-width:800px) {
+@media (max-width:768px) {
     width: 75%;
 }
 
@@ -17,7 +17,7 @@ padding-left: 15px;
   outline: none;
   background: #F9F0DA;
   color: #9E9C9C; 
-  @media (max-width: 800px) {
+  @media (max-width: 768px) {
     width: 100%;
     height: 100px;
     font-size: larger;
@@ -38,7 +38,7 @@ export const SearchButton = styled.button`
   opacity: 0.6;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer; 
-  @media (max-width: 800px) {
+  @media (max-width: 768px) {
     top: 0;
     width: 101px;
     height: 104px;

@@ -25,7 +25,7 @@ export const NavBar = styled.nav`
     display: flex;
     padding-top: 4px;
     column-gap: 25px;    
-    @media (max-width: 800px) {
+    @media (max-width: 768px) {
         width: 50%;
         height: 150px;
         column-gap: 35px;
@@ -43,7 +43,7 @@ export const StyledLink = styled(NavLink)`
     line-height: 3;
     letter-spacing: 0.005em;
     font-weight: bold;
-    @media (max-width: 800px) {
+    @media (max-width: 768px) {
         width: 150px;
         font-size: 50px;
     }
