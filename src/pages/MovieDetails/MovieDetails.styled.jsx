@@ -33,6 +33,7 @@ export const BackgroundImageMovie = styled.img`
 export const SectionDetails = styled.section`
     display: flex;
     max-width: 1400px;
+    margin-top: 5px;
     margin-right: auto;
     margin-left: auto;
     gap: 10px;
@@ -44,7 +45,7 @@ export const AllMovieDetailsContrainer = styled.div`
 
 export const BackPathButtonContainer = styled.div`
   position: absolute;
-  top: 725px;
+  top: 750px;
   display: flex;
   justify-content: center;
   width: 60px;
