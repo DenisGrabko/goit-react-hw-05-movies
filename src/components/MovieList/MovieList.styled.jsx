@@ -6,7 +6,7 @@ list-style: none;
 display: flex;
 flex-wrap: wrap;
 flex-direction: row;
-justify-content: space-between;
+justify-content: space-around;
 padding: 0 40px 0 40px;
 column-gap: 15px;
 row-gap: 15px;
